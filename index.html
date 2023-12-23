@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white">
+
+    <header class="bg-blue-600 text-white py-6 text-center">
+        <h1 class="text-4xl font-extrabold tracking-wider">PassX</h1>
+        <p class="text-lg font-medium">Your Daily Password Manager</p>
+    </header>
+
+
+    <main class="container mx-auto my-8">
+        <section class="inputs p-4 bg-gray-100 dark:bg-gray-800 rounded-md shadow-md">
+            <h1 class="text-3xl font-bold mb-6 text-gray-800 dark:text-white">Enter Account Details</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="mb-4">
+                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300" for="provider">Account
+                        Provider</label>
+                    <input
+                        class="input-field w-full mt-1 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-blue-600 dark:focus:border-blue-400"
+                        type="text" name="provider" id="provider" placeholder="Enter your account provider" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300"
+                        for="username">Username</label>
+                    <input
+                        class="input-field w-full mt-1 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-blue-600 dark:focus:border-blue-400"
+                        type="text" name="username" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300"
+                        for="password">Password</label>
+                    <input
+                        class="input-field w-full mt-1 p-2 rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600 focus:outline-none focus:border-blue-600 dark:focus:border-blue-400"
+                        type="password" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+            </div>
+            <button
+                class="btn-primary w-full py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800"
+                id="submit-btn">Save Details</button>
+        </section>
+        <section class="mt-8">
+            <h1 class="text-2xl font-bold mb-4">Your Passwords</h1>
+            <div class="passwords-container">
+                <div class="overflow-x-auto rounded-md shadow-md">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">
+                                    Provider
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Username
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Password
+                                </th>
+                                <!-- <th scope="col" class="px-6 py-3">
+                                    Action
+                                </th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
