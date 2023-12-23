@@ -25,10 +25,10 @@ const appendEntry = ({ provider, username, password }) => {
 </td>
 `
         // for copy logic
-        `<td class="px-6 py-4 copy">
-    <span href="#"
-        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Copy</span>
-</td>`
+//         `<td class="px-6 py-4 copy">
+//     <span href="#"
+//         class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Copy</span>
+// </td>`
     passwordContainer.prepend(tr)
 };
 
